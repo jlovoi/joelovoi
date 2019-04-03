@@ -1,0 +1,10 @@
+[
+  {
+      "grouping":"Languages, Operating Systems & Tools",
+      "skills":[ "Java","Python", "C", "C++", "git","linux","bash","SQL","javascript"]
+  },
+  {
+      "grouping":"Miscellaneous Skills",
+      "skills":["Conversational in Spanish", "Bloomberg Markets Certified"]
+  }
+]

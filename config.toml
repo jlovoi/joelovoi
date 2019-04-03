@@ -1,0 +1,34 @@
+baseURL = "https://joelovoi.com/"
+languageCode = "en-us"
+title = "Joseph Lovoi"
+theme = "hugo-resume"
+
+[params]
+    firstName = "Joseph"
+    lastName = "Lovoi"
+    address = "Houston, TX"
+    phone = "713-213-5174"
+    contactNote = "Dev Tools Engineer"
+    profileImage = "https://avatars1.githubusercontent.com/u/35247109?s=460&v=4"
+    email = "joelovoi@gmail.com"
+    description = "CompSci nerd who likes Rockets basketball, movies, and video games."
+    favicon = "images/favicon.ico"
+    # what sections
+    showSkills = true
+    showProjects = true
+    showOpenSource = false
+    showPublications = false
+    showExperience = false
+    showEducation = true
+
+    showQr = false
+
+[[params.handles]]
+    name = "LinkedIn"
+    link = "https://www.linkedin.com/in/joseph-lovoi-721103124/"
+
+
+[[params.handles]]
+    name = "GitHub"
+    link = "https://github.com/jlovoi/"
+
