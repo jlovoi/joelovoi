@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="header" class="header">
+    <div id="me">
+      Joe Lovoi
+    </div>
+    <a class="button" id="about">
+      About me
+    </a>
+    <a class="button" id="skillsButton">
+      Experience & Skills
+    </a>
+    <a class="button" id="projectsButton">
+      Projects
+    </a>
+    <a class="button" id="contactButton">
+      Contact
+    </a>
+    <a class="button" id="resumeButton">
+      Resume
+    </a>
+  </div>
+  <div id="page">
+    <h1 id="about-me">About me</h1>
+    <div class="flex-row">
+      <p class="info">
+        I work as a software developer for EOG Resources. While I graduated with
+        business degrees in Finance and Entrepreneurship, I decided that I
+        wanted to pursue my passion for technology So I taught myself Python and
+        enrolled in some undergrad/graduate CS courses at the University of
+        Oklahoma. 2 Semesters later I started my first software job with EOG.
+        <br />
+        <br />
+        Outside of work, I love music, basketball, cooking, movies,
+        snowboarding, mountain biking, fitness, and video games. I live in
+        Denver with my Boxer mutt, Marge, so we try to make it out to the
+        mountains as much as possible.
+      </p>
+      <a class="button icon-button" id="left">
+        <img src="assets/left.svg" class="arrow" />
+      </a>
+      <img id="image" width="350px" height="450px" />
+      <a class="button icon-button" id="right">
+        <img src="assets/right.svg" class="arrow" />
+      </a>
+    </div>
+
+    <h1 id="skills">Skills</h1>
+    <ul>
+      <li>
+        <div class="center">
+          <img src="./assets/js.svg" class="icon" />Javascript
+        </div>
+      </li>
+      <li>
+        <div class="center">
+          <img src="./assets/ts.svg" class="icon" width />Typescript
+        </div>
+      </li>
+      <li>
+        <div class="center">
+          <img src="./assets/react.svg" class="icon" />React
+        </div>
+      </li>
+      <li>
+        <div class="center">
+          <img src="./assets/native.svg" class="icon" />React Native
+        </div>
+      </li>
+      <li>
+        <div class="center">
+          <img src="./assets/redux.svg" class="icon" width />Redux
+        </div>
+      </li>
+      <li>
+        <div class="center">
+          <img src="./assets/node.svg" class="icon" />Node.js
+        </div>
+      </li>
+      <li>
+        <div class="center">
+          <img src="./assets/python.svg" class="icon" />Python
+        </div>
+      </li>
+      <li>
+        <div class="center">
+          <img src="./assets/sql.svg" class="icon sql" />SQL
+        </div>
+      </li>
+      <li>
+        <div class="center">
+          <img src="./assets/mongo.svg" class="icon" />Mongo
+        </div>
+      </li>
+    </ul>
+
+    <h1 id="projects">Projects</h1>
+    <div>
+      <h2>
+        <a href="https://github.com/stev-ou/review_ocr">STEV</a>
+      </h2>
+      <div class="project-info">
+        STEV (Student-Teacher Eval. Visualization) is the product of myself and
+        2 friends being fed up with the frustrating process of sifting through
+        PDFs to see how professors are rated by students. To remedy this, I
+        worked with web-crawler and OCR libraries to download and parse through
+        thousands of pages of PDFs. All this data was then aggregated and
+        cleaned up to be posted to an API, which was displayed by a React
+        frontend.
+      </div>
+      <h2>
+        <a href="https://github.com/jlovoi/docshare-api">Docshare</a>
+      </h2>
+      <div class="project-info">
+        Docshare is a <a href="https://github.com/jlovoi/docshare">React</a> web
+        app with a
+        <a href="https://github.com/jlovoi/docshare-api">Node</a> which allows
+        users to track revisions and sequential approvals made on Word
+        documents. Users can upload a word document, pick users within their
+        organization that they wish to receive revisions and approvals from, and
+        track any actions made on that document. I leveraged an .xml parsing
+        library in python to track pertinent changes so that they may be
+        displayed in an easy-to-read way on the browser.
+      </div>
+      <h2>
+        <a href="https://github.com/jlovoi/firestarter">Firestarter</a>
+      </h2>
+      <div class="project-info">
+        Firestarter is a little starter kit that I created, which implements the
+        boilerplate that I tend to use when ramping up a React web app with
+        Redux and Sagas.
+      </div>
+    </div>
+
+    <h1 id="contactMe">Contact</h1>
+    <ul>
+      <li>
+        <div class="center">
+          <img src="./assets/email.svg" class="icon" />joelovoi@gmail.com
+        </div>
+      </li>
+      <li>
+        <div class="center">
+          <img src="./assets/linkedin.svg" class="icon" width /><a
+            href="https://www.linkedin.com/in/joelovoi/"
+            >LinkedIn</a
+          >
+        </div>
+      </li>
+      <li>
+        <div class="center">
+          <img src="./assets/git.svg" class="icon" /><a
+            href="https://github.com/jlovoi"
+            >Github</a
+          >
+        </div>
+      </li>
+    </ul>
+  </div>
+</body>
+
+<script>
+  function scrollTo(id) {
+    return () => {
+      let elem = document.body.querySelector(id);
+      if (!elem) return;
+      scroll(0, elem.offsetTop - 150);
+    };
+  }
+
+  about.addEventListener("click", scrollTo("#about-me"));
+  skillsButton.addEventListener("click", scrollTo("#skills"));
+  projectsButton.addEventListener("click", scrollTo("#projects"));
+  contactButton.addEventListener("click", scrollTo("#contactMe"));
+  resumeButton.addEventListener("click", () =>
+    open("./assets/jlovoi_resume2022.pdf")
+  );
+
+  const arrowRect = left.getBoundingClientRect();
+  left.style.top = image.height / 2 - arrowRect.height / 2 + "px";
+  right.style.top = image.height / 2 - arrowRect.height / 2 + "px";
+
+  const imageSources = {
+    badbish: { width: 350, height: 400 },
+    banana: { width: 350, height: 400 },
+    bbguhh: { width: 350, height: 450 },
+    bike: { width: 350, height: 300 },
+    feesh: { width: 350, height: 350 },
+    gabbagool: { width: 350, height: 450 },
+    liv: { width: 350, height: 450 },
+    robertoghoul: { width: 350, height: 450 },
+    snow: { width: 350, height: 450 },
+    tbill: { width: 350, height: 450 },
+    tbill2: { width: 350, height: 450 },
+    vinny: { width: 350, height: 650 }
+  };
+  const imageKeys = Object.keys(imageSources);
+  let index = Math.floor(Math.random() * (imageKeys.length - 1));
+  image.src = `./assets/photos/${imageKeys[index]}.jpg`;
+  right.onclick = () => {
+    if (index === imageKeys.length - 1) {
+      index = 0;
+    } else {
+      index++;
+    }
+    image.src = `./assets/photos/${imageKeys[index]}.jpg`;
+    image.style.height = imageSources[imageKeys[index]].height + "px";
+    image.style.width = imageSources[imageKeys[index]].width + "px";
+    left.style.top =
+      imageSources[imageKeys[index]].height / 2 - arrowRect.height / 2 + "px";
+    right.style.top =
+      imageSources[imageKeys[index]].height / 2 - arrowRect.height / 2 + "px";
+  };
+  left.onclick = () => {
+    if (index === 0) {
+      index = imageKeys.length - 1;
+    } else {
+      index--;
+    }
+    image.src = `./assets/photos/${imageKeys[index]}.jpg`;
+    image.style.height = imageSources[imageKeys[index]].height + "px";
+    image.style.width = imageSources[imageKeys[index]].width + "px";
+    left.style.top =
+      imageSources[imageKeys[index]].height / 2 - arrowRect.height / 2 + "px";
+    right.style.top =
+      imageSources[imageKeys[index]].height / 2 - arrowRect.height / 2 + "px";
+  };
+</script>
