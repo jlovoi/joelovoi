@@ -6,24 +6,12 @@
 
 <body>
   <div id="header" class="header">
-    <div id="me">
-      Joe Lovoi
-    </div>
-    <a class="button" id="about">
-      About me
-    </a>
-    <a class="button" id="skillsButton">
-      Experience & Skills
-    </a>
-    <a class="button" id="projectsButton">
-      Projects
-    </a>
-    <a class="button" id="contactButton">
-      Contact
-    </a>
-    <a class="button" id="resumeButton">
-      Resume
-    </a>
+    <div id="me">Joe Lovoi</div>
+    <a class="button" id="about"> About me </a>
+    <a class="button" id="skillsButton"> Experience & Skills </a>
+    <a class="button" id="projectsButton"> Projects </a>
+    <a class="button" id="contactButton"> Contact </a>
+    <a class="button" id="resumeButton"> Resume </a>
   </div>
   <div id="page">
     <h1 id="about-me">About me</h1>
@@ -35,11 +23,28 @@
         enrolled in some undergrad/graduate CS courses at the University of
         Oklahoma. 2 Semesters later I started my first software job with EOG.
         <br />
+        After 3 years of working for EOG, I moved on to work as a Frontend
+        Engineer at Amazon. For a little less than 2 years I worked to help them
+        migrate their antiquated Pharmacy pages from PHP to React, and build out
+        their new health.amazon.com domain from the ground up - it launched in
+        December 2023! While I loved my time at Amazon, it unfortunately had to
+        come to an end when RTO required all members of my organization to
+        relocate to Seattle. I am now enjoying the free time that comes with
+        Funemployment while I search for new opportunities!
         <br />
-        Outside of work, I love music, basketball, cooking, movies,
-        snowboarding, mountain biking, fitness, and video games. I live in
-        Denver with my Boxer mutt, Marge, so we try to make it out to the
-        mountains as much as possible.
+        <br />
+        Outside of work, I love
+        <a
+          href="https://open.spotify.com/intl-es/artist/51v3qPD0rpxSN8pHUWO9ZO?si=kMqAFvZZTvOA_n4zt3bzUA"
+          >music</a
+        >,
+        <a
+          href="ht
+tps://soundcloud.com/hsiya/phonq"
+          >DJing</a
+        >, basketball, cooking, movies, snowboarding, mountain biking, fitness,
+        and video games. I live in Denver with my Boxer mutt, Marge, so we try
+        to make it out to the mountains as much as possible.
       </p>
       <a class="button icon-button" id="left">
         <img src="assets/left.svg" class="arrow" />
@@ -54,12 +59,12 @@
     <ul>
       <li>
         <div class="center">
-          <img src="./assets/js.svg" class="icon" />Javascript
+          <img src="./assets/ts.svg" class="icon" />Typescript
         </div>
       </li>
       <li>
         <div class="center">
-          <img src="./assets/ts.svg" class="icon" width />Typescript
+          <img src="./assets/java.svg" class="icon" width />Java
         </div>
       </li>
       <li>
@@ -112,6 +117,16 @@
         thousands of pages of PDFs. All this data was then aggregated and
         cleaned up to be posted to an API, which was displayed by a React
         frontend.
+      </div>
+      <h2>
+        <a href="https://github.com/UndyWare/boominloudold">BoominLoud</a>
+      </h2>
+      <div class="project-info">
+        BoominLoud is a Discord bot that I build alongside a friend, which is
+        able to receive a youtube link from a user in a Discord channel,
+        download the video, convert it to an .mp3 file, and play the audio to
+        the channel on demand. Thanks to the Discord team for making their APIs
+        easy to use!
       </div>
       <h2>
         <a href="https://github.com/jlovoi/docshare-api">Docshare</a>
@@ -178,7 +193,7 @@
   projectsButton.addEventListener("click", scrollTo("#projects"));
   contactButton.addEventListener("click", scrollTo("#contactMe"));
   resumeButton.addEventListener("click", () =>
-    open("./assets/jlovoi_resume2022.pdf")
+    open("./assets/jlovoi_resume2024.pdf")
   );
 
   const arrowRect = left.getBoundingClientRect();
@@ -197,7 +212,7 @@
     snow: { width: 350, height: 450 },
     tbill: { width: 350, height: 450 },
     tbill2: { width: 350, height: 450 },
-    vinny: { width: 350, height: 650 }
+    vinny: { width: 350, height: 650 },
   };
   const imageKeys = Object.keys(imageSources);
   let index = Math.floor(Math.random() * (imageKeys.length - 1));
