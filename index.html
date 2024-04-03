@@ -23,6 +23,7 @@
         enrolled in some undergrad/graduate CS courses at the University of
         Oklahoma. 2 Semesters later I started my first software job with EOG.
         <br />
+        <br />
         After 3 years of working for EOG, I moved on to work as a Frontend
         Engineer at Amazon. For a little less than 2 years I worked to help them
         migrate their antiquated Pharmacy pages from PHP to React, and build out
@@ -49,7 +50,7 @@ tps://soundcloud.com/hsiya/phonq"
       <a class="button icon-button" id="left">
         <img src="assets/left.svg" class="arrow" />
       </a>
-      <img id="image" width="350px" height="450px" />
+      <img id="image" width="350px" height="650px" />
       <a class="button icon-button" id="right">
         <img src="assets/right.svg" class="arrow" />
       </a>
@@ -132,15 +133,15 @@ tps://soundcloud.com/hsiya/phonq"
         <a href="https://github.com/jlovoi/docshare-api">Docshare</a>
       </h2>
       <div class="project-info">
-        Docshare is a <a href="https://github.com/jlovoi/docshare">React</a> web
-        app with a
-        <a href="https://github.com/jlovoi/docshare-api">Node</a> which allows
-        users to track revisions and sequential approvals made on Word
+        Docshare is a
+        <a href="https://github.com/jlovoi/docshare">React webapp</a> with a
+        <a href="https://github.com/jlovoi/docshare-api">Node backend</a> which
+        allows users to track revisions and sequential approvals made on Word
         documents. Users can upload a word document, pick users within their
         organization that they wish to receive revisions and approvals from, and
         track any actions made on that document. I leveraged an .xml parsing
-        library in python to track pertinent changes so that they may be
-        displayed in an easy-to-read way on the browser.
+        library in python, and wrote algorithms to track pertinent changes so
+        that they may be displayed in an easy-to-read way on the browser.
       </div>
       <h2>
         <a href="https://github.com/jlovoi/firestarter">Firestarter</a>
@@ -212,12 +213,18 @@ tps://soundcloud.com/hsiya/phonq"
     snow: { width: 350, height: 450 },
     tbill: { width: 350, height: 450 },
     tbill2: { width: 350, height: 450 },
+    tbill3: { width: 350, height: 550 },
     vinny: { width: 350, height: 650 },
+    half: { width: 450, height: 550 },
+    jackson: { width: 350, height: 650 },
+    peeg: { width: 450, height: 550 },
+    hsiya: { width: 450, height: 550 },
   };
   const imageKeys = Object.keys(imageSources);
-  let index = Math.floor(Math.random() * (imageKeys.length - 1));
+  let index = imageKeys.length - 3;
   image.src = `./assets/photos/${imageKeys[index]}.jpg`;
   right.onclick = () => {
+    console.log(imageKeys);
     if (index === imageKeys.length - 1) {
       index = 0;
     } else {
