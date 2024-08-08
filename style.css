@@ -125,7 +125,6 @@ a.icon-button {
 .flex-row {
   display: flex;
   flex-direction: row;
-  height: 750px;
 }
 
 .center {
